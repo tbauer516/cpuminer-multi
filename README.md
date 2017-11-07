@@ -41,6 +41,7 @@ Algorithms
  * ✓ __lyra2RE__ (Cryptocoin)
  * ✓ __lyra2REv2__ (VertCoin [VTC])
  * ✓ __myr-gr__ Myriad-Groestl (MyriadCoin [MYR])
+ * ✓ __m7m__ (Magicoin [XMG])
  * ✓ __neoscrypt__ (Feathercoin)
  * ✓ __nist5__ (MistCoin [MIC], TalkCoin [TAC], ...)
  * ✓ __pentablake__ (Joincoin)
@@ -80,6 +81,7 @@ Dependencies
  * libcurl http://curl.haxx.se/libcurl/
  * jansson http://www.digip.org/jansson/ (jansson source is included in-tree)
  * openssl libcrypto https://www.openssl.org/
+ * libgmp (GNU Multiple Precision Library) https://gmplib.org/
  * pthreads
  * zlib (for curl/ssl)
 
@@ -122,6 +124,7 @@ _OR_
 
 #### Basic Windows build with Visual Studio 2013
  * All the required .lib files are now included in tree (windows only)
+ * For visual studio, the GNU MP library is available in the project MPIR
  * AVX enabled by default for x64 platform (AVX2 and XOP could also be used)
 
 #### Basic Windows build instructions, using MinGW64:
@@ -132,6 +135,7 @@ _OR_
    * Make sure you have libcurl.m4 in MinGW\share\aclocal
    * Make sure you have curl-config in MinGW\bin
  * Install openssl devel (https://www.openssl.org/related/binaries.html)
+ * Download and "make install" sources of libgmp (v5.1 and v6 are ok)
  * In the MSYS shell, run:
    * for 64bit, you can use `./mingw64.sh` else :
      `./autogen.sh	# only needed if building from git repo`

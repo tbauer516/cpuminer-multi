@@ -29,6 +29,7 @@ Version 1.2 (Tanguy Pruvot)
 - Add Sib(coin) algo
 - Add Bastion algo
 - Add Yescrypt and scrypt-jane algos
+- Add m7m algo
 - Compute and show network diff in pools too
 - Compute Shares diff and count solved blocks
 - Checkup on arm, tested ok on Tegra K1 (CyanogenMod 12.1)

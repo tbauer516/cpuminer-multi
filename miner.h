@@ -220,6 +220,7 @@ int scanhash_luffa(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *
 int scanhash_lyra2(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
 int scanhash_lyra2rev2(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
 int scanhash_myriad(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
+int scanhash_m7m(int thr_id, struct work *work, uint64_t max_nonce, uint64_t *hashes_done);
 int scanhash_neoscrypt(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done, uint32_t profile);
 int scanhash_nist5(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
 int scanhash_pentablake(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
@@ -249,6 +250,7 @@ int scanhash_x14(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *ha
 int scanhash_x15(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
 int scanhash_x17(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
 int scanhash_xevan(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
+int scanhash_velvet(int thr_id, struct work *work, uint64_t max_nonce, uint64_t *hashes_done);
 int scanhash_yescrypt(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
 int scanhash_zr5(int thr_id, struct work *work, uint32_t max_nonce, uint64_t *hashes_done);
 
@@ -511,6 +513,7 @@ void lbry_hash(void *output, const void *input);
 void luffahash(void *output, const void *input);
 void lyra2_hash(void *state, const void *input);
 void lyra2rev2_hash(void *state, const void *input);
+void m7mhash(void *output, const void *input);
 void myriadhash(void *output, const void *input);
 void neoscrypt(unsigned char *output, const unsigned char *password, uint32_t profile);
 void nist5hash(void *output, const void *input);
@@ -529,6 +532,7 @@ void tribus_hash(void *output, const void *input);
 void veltor_hash(void *output, const void *input);
 void xevan_hash(void *output, const void *input);
 void x11evo_hash(void *output, const void *input);
+void velvethash(void *output, const void *input);
 void x11hash(void *output, const void *input);
 void x13hash(void *output, const void *input);
 void x14hash(void *output, const void *input);

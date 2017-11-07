@@ -35,10 +35,12 @@ cpuminer_SOURCES = \
   sha3/sph_hamsi.c \
   sha3/sph_haval.c \
   sha3/sph_fugue.c \
+#  sha3/sph_gost.c \
   sha3/sph_ripemd.c \
   sha3/sph_sha2.c \
   sha3/sph_sha2big.c \
   sha3/sph_shabal.c \
+  sha3/sph_tiger.c \
   sha3/sph_whirlpool.c \
   sha3/gost_streebog.c \
   crypto/blake2s.c \
@@ -51,6 +53,7 @@ cpuminer_SOURCES = \
   crypto/c_skein.c \
   crypto/hash.c \
   crypto/aesb.c \
+  crypto/magimath.cpp \
   lyra2/Lyra2.c lyra2/Sponge.c \
   yescrypt/yescrypt-common.c yescrypt/yescrypt-best.c \
   yescrypt/sha256_Y.c \
@@ -75,6 +78,7 @@ cpuminer_SOURCES = \
   algo/lyra2re.c \
   algo/lyra2rev2.c \
   algo/myr-groestl.c \
+  algo/m7m.c \
   algo/keccak.c \
   algo/pentablake.c \
   algo/quark.c \
@@ -95,6 +99,7 @@ cpuminer_SOURCES = \
   algo/tribus.c \
   algo/veltor.c \
   algo/x11evo.c \
+  algo/velvet.c \
   algo/x11.c \
   algo/x13.c \
   algo/x14.c \
@@ -126,7 +131,7 @@ if HAVE_WINDOWS
 endif
 
 cpuminer_LDFLAGS	= @LDFLAGS@
-cpuminer_LDADD	= @LIBCURL@ @JANSSON_LIBS@ @PTHREAD_LIBS@ @WS2_LIBS@
+cpuminer_LDADD	= @LIBCURL@ @JANSSON_LIBS@ @PTHREAD_LIBS@ @WS2_LIBS@ -lgmp
 cpuminer_CPPFLAGS = @LIBCURL_CPPFLAGS@ $(ALL_INCLUDES)
 cpuminer_CFLAGS   = -Wno-pointer-sign -Wno-pointer-to-int-cast $(disable_flags)
 
