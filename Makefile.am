@@ -35,7 +35,6 @@ cpuminer_SOURCES = \
   sha3/sph_hamsi.c \
   sha3/sph_haval.c \
   sha3/sph_fugue.c \
-#  sha3/sph_gost.c \
   sha3/sph_ripemd.c \
   sha3/sph_sha2.c \
   sha3/sph_sha2big.c \
