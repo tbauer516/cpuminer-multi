@@ -6,6 +6,14 @@ CPUMiner-Multi
 This is a multi-threaded CPU miner,
 fork of [pooler](//github.com/pooler)'s cpuminer (see AUTHORS for list of contributors).
 
+\* __Note__
+
+I (tbauer516) forked and merged the previous versions of the file.
+Forked from: lucasjones -> tpruvot -> dan-and -> tbauer516
+Merged: m7m into linux, linux-aarch64 into linux
+
+Now includes an m7m hash for Magicoin and the build.sh file now works for most sbc's
+
 #### Table of contents
 
 * [Algorithms](#algorithms)
